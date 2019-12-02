@@ -12,7 +12,7 @@ function App() {
   return (
     <ApolloProvider client={client} >
       <div className="App">
-        <h1>Spacex Informational Site</h1>
+        <h1 className="display-4 my-3">Spacex Informational Site</h1>
         <Launches />
       </div>
     </ApolloProvider>
