@@ -24,7 +24,7 @@ export default function Launches(){
 
   return (
     <div>
-      <h2 className="display-5 my-4">Launches</h2>
+      <h2 className="display-5 my-4" style={{marginLeft: '12px'}}>Launches</h2>
       {
         data.launches.map( launch => (
           <LaunchListItem key={launch.flight_number} launch={launch}/>

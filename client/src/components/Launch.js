@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import classnames from 'classnames';
 import gql from 'graphql-tag'; //makes queries
 import { useQuery } from '@apollo/react-hooks';
@@ -36,8 +36,8 @@ export default function Launch(props){
 
   return (
   <div>
-    <h2>{data.launch.mission_name}</h2>
-    <h4>Launch Details</h4>
+    <h2 style={{margin: '25px'}}>{data.launch.mission_name}</h2>
+    <h4 style={{margin: '25px'}}>Launch Details</h4>
     <ul className='list-group' style={{margin: '0 50px'}}>
       <li className='list-group-item'>
         <div>flight #{data.launch.flight_number}</div>
@@ -52,7 +52,7 @@ export default function Launch(props){
         </div>
       </li>
     </ul>
-    <h4>Rocket Details</h4>
+    <h4 style={{margin: '25px'}}>Rocket Details</h4>
     <ul className='list-group' style={{margin: '0 50px'}}>
       <li className='list-group-item'>
         <div>name: {data.launch.rocket.rocket_name}</div>
@@ -60,6 +60,7 @@ export default function Launch(props){
         <div>type: {data.launch.rocket.rocket_type}</div>
       </li>
     </ul>
+    <Link to="/" style={{margin: '25px'}} className="btn btn-dark">Back</Link>
   </div>
   )
 }
